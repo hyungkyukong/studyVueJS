@@ -1,17 +1,17 @@
 Vue.component('my-calendar', {
-    props: {
-        date: '2020-02-02'
+    template:'<div class="my-calendar">{{value}}  <div>{{tt}}</div></div>',
+    //자식 컴포넌트에서 현재  값에 접근하려면 value를 입력해야 함
+    props:{value:String,tt:String},
+    created : function(){
+        this.$emit('input','2020')
     },
-    created: function() {
-        this.$emit('input', '2018-01-01')
-    }
-
-
+    
 })
+
 
 new Vue({
     el: '#app',
     data: {
-        parentsData: '<부모의 데이터>'
+       date : '1999'
     }
 })
