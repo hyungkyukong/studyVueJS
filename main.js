@@ -1,7 +1,7 @@
 Vue.component('my-component', {
     template: '<div>\
         <p>템플릿1</p>\
-        <p>템플릿2</p>\
+        <p>템플릿22</p>\
         </div>'
 })
 
