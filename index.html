@@ -13,11 +13,9 @@
 </head>
 
 <body>
-    Testing...
     <div id="app">
-        <my-component>
-
-        </my-component>
+        <button v-on:click="current^=1">toggle</button>
+        <div v-bind:is="component"></div>
     </div>
 
 
