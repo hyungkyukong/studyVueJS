@@ -8,15 +8,18 @@
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
     <meta charset="utf-8">
+    <!-- main.css 연결 -->
+    <link rel="stylesheet" href="main.css">
     <title>Vue.js App</title>
     <!-- <link href="main.css" rel="stylesheet"> -->
 </head>
 
 <body>
     <div id="app">
-        <boutton v-on:click="current='comp-board'">메시지 목록</boutton>
-        <boutton v-on:click="current='comp-form'">글쓰기 양식</boutton>
-        <div v-bind:is="current"></div>
+        <button v-on:click="show=!show">변경하기</button>
+        <transition>
+            <div v-show="show">트랜지션하고 싶은 요소</div>
+        </transition>
     </div>
 
 
