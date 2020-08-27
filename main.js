@@ -1,19 +1,15 @@
 new Vue({
     el: '#app',
     data: {
-        order: false,
-        list: [
-            { id: 1, name: '사과', price: 100 },
-            { id: 2, name: '바나나', price: 200 },
-            { id: 3, name: '딸기', price: 300 },
-
-        ]
+        show: true
     },
-    computed: {
-        //order 값에 따라 리스트의 순서를  반전하는 산출 속성
-        sortedList: function() {
-            //Lodash의 orderBy 메서드 사용하기
-            return _.orderBy(this.list, 'price', this.order ? 'desc' : 'asc');
+    methods: {
+        enter: function(el, done) {
+            console.log('enter')
+            setTimeout(done, 1000) //1초 후에 enter를 종료하고 after-enter로 변경하기
+        },
+        afterEnter: function(el) {
+            console.log('afterEnter')
         }
     }
 })
