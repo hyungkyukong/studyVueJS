@@ -16,10 +16,13 @@
 
 <body>
     <div id="app">
-        <button v-on:click="show=!show">변경하기</button>
-        <transition>
-            <div v-show="show">트랜지션하고 싶은 요소</div>
-        </transition>
+        <button v-on:click="order=!order">변경하기</button>
+        <!-- transition-group 태그로 지정한 속성은  랩 요소에 추가하기 -->
+        <transition-group tag="ul" class="list">
+            <li v-for="item in sortedList" v-bind:key="item.id">
+                {{item.name}} {{item.pricec}} 원
+            </li>
+        </transition-group>
     </div>
 
 

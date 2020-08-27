@@ -1,14 +1,23 @@
-/* 1초 동안 투명도를 변화 */
-
 .v-enter-active,
 .v-leave-active {
-    transition: opacity 1s;
+    transition: opacity 1s, transform 1s;
 }
 
-
-/* 더 이상 보이게 되지 않았을 때의 투명도 */
+.v-leave-active {
+    position: absolute;
+}
 
 .v-enter,
 .v-leave-to {
     opacity: 0;
+}
+
+.v-move {
+    transition: transform 1s;
+}
+
+.v-enter-active,
+.v-leave-active,
+.v-mode {
+    transition: opacity 1s, transform 1s;
 }
